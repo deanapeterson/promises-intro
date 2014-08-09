@@ -1,0 +1,140 @@
+#Introduction
+
+As JavaScript applications get larger and more complex the necessity to utilize modular architecture is important for the longterm maintenance and extension of the application.  By modular (one function/class per file vs single or few monolithic files), loosely coupled code.
+
+One of the challenges to achieving this how to handle aysnchronous tasks (i.e. AJAX) using callbacks.
+
+Callback Examples: (keep these in the presentation)
+	simple - Problem it violates the SPR
+	simple with callback passed
+
+	Callback with cache - plnkr
+		fine for small 
+		Problem - Concurrent requests
+
+		think for a moment what you would possibly write to handle this?
+
+How do Promises help us with this
+
+
+
+A power solution has been developed and they are called Promises.
+
+A Promise is a proxy for a value not necessarily known when the promise is created.
+	
+
+
+
+
+
+It allows you to associate handlers to an asynchronous action's eventual success or failure.
+
+This lets asynchronous methods return values like synchronous methods: instead of the final value, the asynchronous method returns a promise of having a value at some point in the future."
+
+
+
+
+
+
+A method/function that returns a Promise API returns not the expected value but a function that allows you 
+
+
+
+----------------
+2 - [Mozilla docs|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise]
+
+
+
+
+
+
+Why should I care?
+
+
+
+
+
+
+	Promises are not just jQuery or Angular thing promises are now part of the EcmaScript 6 spec and is available natively in the latest versions of Chrome and Firefox
+	----------------------------------
+	1 - http://caniuse.com/#feat=promises
+
+
+	What problems do they solve?
+
+	When to use promises:
+		multiple consumers of a given module
+
+	Callbacks
+
+
+
+		Fetch data and render it to the webpage - Callback
+			simple $.ajax
+		
+		Adhere to the Single Responsibility Principle
+			wrap $.ajax call in function pass callback
+
+		Fetch and cache data for future calls
+			wrap $.ajax
+
+		Fetch data and cache while handling multiple concurrent calls
+			Callback - 
+
+
+		Fetch data and do transforms of data
+
+
+
+
+		#1 Callbacks are imperative - required, you must provide the asynch operation with WHAT to do next.
+			"Go get the data and then do this with it."
+
+
+		Main Points
+			Promses are fundamentally different way of dealing with asynchronous events
+
+
+			Promises are functional - 
+				"Go get the data and let me know when you do."
+				-or-
+				"Do this thing and let me know when you are done."
+
+		onAnimation Complete
+			action on complete with callback
+				Callbacks aren't evil
+			
+			action on resolve
+	
+
+	API
+		Deferred Object
+			Resolve method
+			Reject method
+			
+			Promise Object
+				then method
+					success handler
+					error handler
+		Utilities
+			$q.when() - wraps data in a resolved promise.
+			$q.all() - receives an array of promises and will resolve or reject 
+
+
+	Tips for learning and working with Promises:
+		They are essential for modular javascript development
+		They 
+
+
+Resources:
+	Links :
+		http://www.html5rocks.com/en/tutorials/es6/promises/
+		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+		http://promisesaplus.com/
+		ES6 - Promises Spec : https://github.com/domenic/promises-unwrapping
+
+	Libraries:
+		"Q" : 
+		"When" : 
+ 		$.deferred (jQuery) : 
+ 		$q (Angular)
