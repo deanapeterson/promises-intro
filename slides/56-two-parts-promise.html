@@ -1,0 +1,20 @@
+<h3>The "Promise" object</h3>
+<p class="fragment">Contains a ".then()" method that takes two arguments</p>
+<ul>
+   <li class="fragment">Success handler</li>
+   <li class="fragment">Error handler</li>
+</ul>
+<pre class="fragment"><code class="javascript" data-trim>
+var getUser = getUser(); //promise object is returned
+
+function onSuccess(userData){
+   //do something with the userData
+}
+
+function onError(reasonStr){
+   //something bad happened
+   console.error(reasonStr);
+}
+
+getUser.then(onSuccess, onError);
+</code></pre>

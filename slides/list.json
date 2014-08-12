@@ -1,4 +1,20 @@
 [
-    "index.md",
-    "promises-title.html"
+    "00-index.html",
+    "10-intro.html",
+    "15-intro-2.html",
+    "18-the-asynch-problem.html",
+    "30-Asynch-tasks.html",
+    "33-Asynch-tasks-2.html",
+    "38-callbacks.html",
+    "40-callback-examples-simple.html",
+    "42-callback-examples-simple-2.html",
+    "44-callback-examples-srp.html",
+    "46-callback-examples-cache.html",
+    "48-Callback-problems.html",
+    "50-promises.html",
+    "52-promises-benefits.html",
+    "54-two-parts.html",
+    "55-two-parts-deferred.html",
+    "56-two-parts-promise.html",
+    "56-live-example.html"
 ]

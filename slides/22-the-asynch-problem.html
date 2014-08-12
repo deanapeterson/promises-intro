@@ -1,0 +1,27 @@
+<h2>The Asynch Problem:</h2>
+<p class='fragment'>Modules that encapsulate Asynchronous Tasks.</p>
+
+
+<pre class="fragment"><code class="html" data-trim>
+
+
+</code></pre>
+<pre class='fragment'><code class="js" data-trim>
+//This doesn't work
+//the ajax call has to wait for the server to respond
+function getUser(){
+   var userData;
+
+   $.ajax({
+      url : "user.json",
+      method : "GET",
+      success : function(data){
+         userData = data;
+      }
+   })
+
+   return userData; //returns undefined
+}
+
+var userData = getUser();
+</code></pre>

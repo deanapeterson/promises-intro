@@ -1,0 +1,28 @@
+<h2>Callback Example - SRP</h2>
+<div class="fragment">
+Solution: Wrap $.ajax in a function that requires a callback argument.
+<pre><code data-trim="" class="javascript">
+function getUser(onSuccess) {
+  $.ajax({
+    url: "user.json",
+    type: "GET",
+    success: onSuccess
+  });
+}
+</code></pre>
+</div>
+<div class="fragment">
+Create a second function that handles the rendering of the data.
+<pre class='fragment'><code data-trim="" class="javascript">
+function onSuccess(data){
+    $.each(data, function(key, value) {
+    $("#" + key).text(value);
+  });
+}
+
+getUser(onSuccess); //call getUser passing in the callback
+</code></pre>
+</div>
+<p>
+	<span class="fragment">Problem: </span><span class="fragment">What if the data is needed by different modules at different times.</span>
+</p>

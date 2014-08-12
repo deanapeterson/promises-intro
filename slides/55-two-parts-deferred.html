@@ -1,0 +1,23 @@
+<h3>The "Deferred" object</h3>
+
+<ul>
+   <li class="fragment">Has a ".resolve()" method for success.</li>
+   <li class="fragment">Has a ".reject()" for failure.</li>
+</ul>
+<pre class='fragment'><code class="javascript" data-trim>
+function getUser(){
+   var userData = {
+     "name" : "John Doe",
+     "email" : "jd_1234@email.com",
+     "phone" : "555-555-5555"
+   };
+
+   var DFD = $.Deferred();
+
+   DFD.resolve(userData);  //This example is synchronous, it doesn't matter.
+   // -or-
+   DFD.reject("User not known");
+   
+   return DFD.promise();
+}
+</code></pre>

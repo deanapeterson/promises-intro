@@ -2,7 +2,14 @@
 
 As JavaScript applications get larger and more complex the necessity to utilize modular architecture is important for the longterm maintenance and extension of the application.  By modular (one function/class per file vs single or few monolithic files), loosely coupled code.
 
-One of the challenges to achieving this how to handle aysnchronous tasks (i.e. AJAX) using callbacks.
+One of the challenges to modular architecture is how to handle aysnchronous tasks (i.e. AJAX calls, animations, DOM, events, etc).
+
+Traditionally, functions are passed to the asynch function to be execuated on success (or error).  These are "Callbacks."
+
+Example:
+	getUser()
+	renderUserData()
+
 
 Callback Examples: (keep these in the presentation)
 	simple - Problem it violates the SPR
@@ -133,6 +140,8 @@ Resources:
 		http://promisesaplus.com/
 		ES6 - Promises Spec : https://github.com/domenic/promises-unwrapping
 
+http://www.slideshare.net/clutchski/writing-asynchronous-javascript-101
+http://tech.pro/blog/1402/five-patterns-to-help-you-tame-asynchronous-javascript
 	Libraries:
 		"Q" : 
 		"When" : 

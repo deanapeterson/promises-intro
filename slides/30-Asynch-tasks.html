@@ -1,0 +1,15 @@
+<h3>What do we mean by "Asynchronous?" tasks</h3>
+<p class="fragment">Asynchronous tasks essentially step out of the flow of the code.</p>
+<pre class="fragment"><code class="javascript" data-trim>
+var userData;
+
+$.ajax({
+   url : "userData.json",
+   type : "GET",
+   success : function(data){
+      userData = data;
+   }
+});
+
+console.log("User: ", userData); // returns undefined
+</code></pre>
