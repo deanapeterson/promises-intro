@@ -1,0 +1,11 @@
+<h3>Combining Promises</h3>
+Group multiple promises to produce a single promise with the ".all()" method.
+
+<pre><code class="javascript" data-trim>
+$q.all([promiseA, promiseB]).then(function(promisesSuccessResult){
+	console.log(promisesSuccessResult[0]) //promiseA result
+	console.log(promisesSuccessResult[1]) //promiseB result
+});
+</code></pre>
+<p><small>Note: jQuery's '$.when()' method does the same thing.</small></p>
+View : <a href="http://plnkr.co/edit/FmIft0EZPT43k4QpUgRz">plnkr</a>, <a href="/code-examples/allDone	/">non-plnkr</a>, <a href="/code-examples/allDone	.zip">download</a>
